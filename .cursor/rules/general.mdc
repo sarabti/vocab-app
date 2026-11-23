@@ -1,0 +1,16 @@
+---
+description: Design and implement for mobile browsers first, then desktop browsers
+alwaysApply: true
+---
+
+# Mobile-browser first
+
+The shipped experience is a mobile browser: iPhone Safari, iOS Chrome, and Android Chrome and Safari. Desktop browsers are a secondary target.
+
+When building or changing UI, layout, styling, interaction, or rendered data:
+
+1. Design and implement for a phone viewport first (narrow width, touch input, on-screen keyboard, safe areas).
+2. Then adapt the same UI so it still works on desktop browsers.
+3. Prefer CSS that starts from the small screen and adds desktop styles with min-width media queries.
+4. Use touch-friendly targets, avoid hover-only actions, and account for mobile browser chrome (address bar, safe-area insets, 100vh quirks).
+5. Verify behavior on a phone-sized viewport before treating a desktop layout as done.
