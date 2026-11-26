@@ -1,0 +1,19 @@
+[data-slot="input-group-control"]:-webkit-autofill,
+[data-slot="input-group-control"]:-webkit-autofill:focus {
+  transition: background-color 9999s ease-in-out 0s;
+  -webkit-text-fill-color: var(--foreground);
+  caret-color: var(--foreground);
+}
+
+[data-slot="input-group"]:has(
+  [data-slot="input-group-control"]:-webkit-autofill
+) {
+  background-color: rgb(232 240 254); /* Chrome's light autofill color */
+}
+
+.dark
+  [data-slot="input-group"]:has(
+    [data-slot="input-group-control"]:-webkit-autofill
+  ) {
+  background-color: rgb(70 90 126); /* Chrome's dark autofill color */
+}
